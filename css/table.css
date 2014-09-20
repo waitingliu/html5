@@ -1,0 +1,45 @@
+﻿table{
+	width:600px;
+	margin:20px auto;
+	border-collapse:collapse;
+}
+th,td{
+	border:none;
+	text-align:center;
+}
+th{
+	background-color:#000;
+	color:#fff;
+}
+/*
+	选择器
+	父元素的第1个tr元素
+	tr:nth-of-type(1)
+*/
+tr:nth-of-type(even){
+	background-color:#f3f3f3;
+}
+tr:nth-of-type(odd){
+	background-color:#ddd;
+}
+/*nth-child查找某元素的子元素
+	nth-child(n)选择所有
+	nth-child(n+2)选择除了第一个之外的所有
+	nth-child(2n)每两个选择一个
+*/
+td:nth-child(n+2){
+	text-align:right;
+}
+/*选择最后一个子元素*/
+tr:last-child{
+	font-weight:bolder;
+}
+td:last-child{
+	font-weight:bolder;
+}
+/*从最后向前查找元素
+	倒数第二行，倒数第二列的那个元素
+*/
+tr:nth-last-child(2) td:nth-last-child(2){
+	color:red;
+}

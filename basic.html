@@ -69,6 +69,21 @@
 				<li><a href="tanchu.html" class="popup">弹出窗口3(不使用onclick)</a></li>
 				<li><a href="tanchu.html" class="popup" data-width="600" data-height="400">弹出窗口4(使用data-xxx自定义数据属性)</a></li>
 			</ul>
+			<article class="columns">
+			<header>
+				<h2>分栏显示文章</h2>
+				<p>Posted by waitingliu
+					<time datetime="2014-09-20">2014.09.20</time>
+				</p>
+			</header>
+			<aside>
+			<p>			然后线程2调用child.setParent(parent)。因为setParent()是同步的，所以线程2会对child对象加锁以不让其它线程访问该对象。现在child和parent对象被两个不同的线程锁住了。接下来线程1尝试调用child.setParentOnly()方法，但是由于child对象现在被线程2锁住的，所以该调用会被阻塞。线程2也尝试调用parent.addChildOnly()，但是由于parent对象现在被线程1锁住，导致线程2也阻塞在该方法处。现在两个线程都被阻塞并等待着获取另外一个线程所持有的锁。</p>
+			<p>注意：像上文描述的，这两个线程需要同时调用parent.addChild(child)和child.setParent(parent)方法，并且是同一个parent对象和同一个child对象，才有可能发生死锁。上面的代码可能运行一段时间才会出现死锁。
+			</p>
+			<p>这些线程需要同时获得锁。举个例子，如果线程1稍微领先线程2，然后成功地锁住了A和B两个对象，那么线程2就会在尝试对B加锁的时候被阻塞，这样死锁就不会发生。因为线程调度通常是不可预测的，因此没有一个办法可以准确预测什么时候死锁会发生，仅仅是可能会发生。
+			</p>
+			</aside>
+			</article>
 		</section>
 		<footer id="page_footer">
 			<p>&copy;2014 WaitingLiu</p>
