@@ -1,0 +1,43 @@
+﻿body{
+	width:90%;
+	margin:15px auto;/*第一项：是上下边框，第二项：是左右，auto代表水平居中*/
+}
+fieldset{
+	width:350px;
+}
+fieldset#userinfo{
+	float:left;
+	margin-right:10px
+}
+filedset#carinfo{
+	float:right;
+	
+}
+filedset#userinfo ol{
+	padding:0;
+	margin:2px;
+}
+fieldset#userinfo ol li{
+	list-style:none;
+	margin:0 0 9px 0;
+	padding:0;
+}
+filedset#carinfo ul li{
+	clear:both;
+	list-style:none;
+}
+filedset#carinfo ui li>b,li>span{
+	font-size:20px;
+	display:block;
+	float:left;
+	width:100px
+}
+fieldset#carinfo ul li>span{
+	width:300px;
+	margin:left:20px;
+}
+
+/*使input单独成行*/
+fieldset input{
+	display:block;
+}

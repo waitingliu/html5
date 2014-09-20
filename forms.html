@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/form.css" type="text/css">
+		<title>表单</title>
+	</head>
+	<body>
+		<form>
+			<fieldset id="userinfo">
+				<legend>用户信息</legend>
+				<ol>
+					<li>
+						<lable for="name">Name</lable>
+						<input type="text" name="name" autofocus id="name">
+					</li>
+					<li>
+						<input type="submit" value="Submit">
+					</li>
+					<li>
+						<lable for="role">Role</lable>
+						<input type="range" min="0" max="10" name="role" value="0" id="role">
+					</li>
+				</ol>
+			</fieldset>
+			<fieldset id="carinfo">
+				<legend>汽车信息</legend>
+				<ul>
+					<li>
+						<b>Name</b>
+						<span id="name" contenteditable>Human nature</span>
+					</li>
+					<li>
+						<b>City</b>
+						<span id="name" contenteditable>Human nature</span>
+					</li>
+					<li>
+						<b>State</b>
+						<span id="name" contenteditable>Human nature</span>
+					</li>
+					<li>
+						<b>Email</b>
+						<span id="name" contenteditable>Human nature</span>
+					</li>
+				</ul>
+			</fieldset>
+		</form>
+	</body>
+</html>	

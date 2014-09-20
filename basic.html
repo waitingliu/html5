@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/style.css" type="text/css">
+		<title>标题</title>
+		<!--[if IE 6-9]-->
+		<script type="text/javascript">
+			document.createElement("nav");
+			document.createElement("header");
+			document.createElement("footer");
+			document.createElement("section");
+			document.createElement("aside");
+			document.createElement("article");
+		</script>
+		
+	</head>
+	<body>
+		<header id="page_header">
+			<h1>
+				Waitingliu Blog
+			</h1>
+			<nav>
+				<ul>
+					<li><a href="">Articles</a></li>
+					<li><a href="">Pictures</a></li>
+					<li><a href="">Tips</a></li>
+					<li><a href="">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+		<section id="posts">
+		<article class="post">
+			<header>
+				<h2>死锁</h2>
+				<p>Posted by waitingliu
+					<time datetime="2014-09-20">2014.09.20</time>
+				</p>
+			</header>
+			<aside>
+			<p>
+				&quot;<i>注意：像上文描述的，这两个线程需要同时调用parent.addChild(child)和child.setParent(parent)方法，并且是同一个parent对象和同一个child对象，才有可能发生死锁。上面的代码可能运行一段时间才会出现死锁。</i>&quot;
+			</p>
+			</aside>
+			<p>死锁是两个或更多线程阻塞着等待其它处于死锁状态的线程所持有的锁。死锁通常发生在多个线程同时但以不同的顺序请求同一组锁的时候。
+			</p>
+			<p>				例如，如果线程1锁住了A，然后尝试对B进行加锁，同时线程2已经锁住了B，接着尝试对A进行加锁，这时死锁就发生了。线程1永远得不到B，线程2也永远得不到A，并且它们永远也不会知道发生了这样的事情。为了得到彼此的对象（A和B），它们将永远阻塞下去。这种情况就是一个死锁。
+			</p>
+			<footer>
+				<p><a href=""><i>赞</i></a></p>
+			</footer>
+		</article>
+		</section>
+		<section id="sidebar">
+			<nav>
+				<h3>Archives</h3>
+				<ul>
+					<li><a href="">Java</a></li>
+					<li><a href="">C/C++</a></li>
+					<li><a href="">Python</a></li>
+					<li><a href="">HTML5/CSS3</a></li>
+				</ul>
+			</nav>
+		</section>
+		<section id="demos">
+			<ul>
+				<li><a href="#" onclick="window.open('tanchu.html','弹出窗口','width=300,height=200');">弹出窗口1</a></li>
+				<li><a href="tanchu.html" onclick="window.open(this.href,'弹出窗口','width=300,height=200');">弹出窗口2(href不为#)</a></li>
+				<li><a href="tanchu.html" class="popup">弹出窗口3(不使用onclick)</a></li>
+				<li><a href="tanchu.html" class="popup" data-width="600" data-height="400">弹出窗口4(使用data-xxx自定义数据属性)</a></li>
+			</ul>
+		</section>
+		<footer id="page_footer">
+			<p>&copy;2014 WaitingLiu</p>
+			<nav>
+				<ul>
+					<li><a href="">Home</a></li>
+					<li><a href="">About</a></li>
+					<li><a href="">Join us</a></li>
+				</ul>
+			</nav>
+		</footer>
+		<script>
+			$(function(){
+			var links = $("a.popup");
+			links.click(function(event){
+				event.preventDefault();
+				var href= $(this).attr("href");
+				var width= $(this).attr("data-width");
+				var height= $(this).attr("data-height");
+				var popup = window.open(href,"popup","height="+height+",width="+width+"");
+			});
+			});
+			
+		</script>
+	</body>
+</html>
