@@ -1,25 +1,52 @@
 ﻿body{
 	width:90%;
-	margin:15px auto;
+	margin:35px auto;
 }
 #conference{
 	background-color:#000;
 	width:100%;
 	float:left;
-	height:240px;
+	background-image:url('../img/ads.jpg');
+	
+	height:500px;
 }
 #badge{
 	text-align:center;
 	width:20%;
 	border:2px solid blue;
+	background-image:-webkit-gradient(
+		linear,left top,left bottom,
+		color-stop(0,#fff),
+		color-stop(1,#efefef);
+	);
+	/*
+		第一个参数：水平偏移量（正数——阴影出现在左边，负数——阴影右边）
+		第二个参数：垂直偏移量（正数——阴影出现在下边，负数——阴影上边）
+		第三个参数：模糊半径，值越大越模糊
+		第四个参数：阴影颜色
+	*/
+	-webkit-box-shadow:5px 5px 5px #333;/*给标志加阴影*/
+	box-shadow:5px 5px 5px #333;
+	
+	/*旋转标志*/
+	-webkit-transform:rotate(-7.5deg);
+	transform:rotate(-7.5deg);
 }
 #info{
+	float:left;
 	margin:20px;
 	padding:20px;
 	width:70%;
-	height:60%;
+	height:80%;
+	/*CSS3引入了rgb()和rgba()
+		rgb(255,0,0)代表红色
+		rgba(255,0,0,0.8)最后一个参数代表透明度，范围0——1
+	*/
+	background-color:rgba(255,255,255,0.95);
+	/*圆角化*/
+	border-radius:12px;
 }
-#badge,#info{
+#badge{
 	float:left;
 	background-color:#fff;
 }
@@ -32,4 +59,7 @@
 	margin:0;
 	background-color:blue;
 	color:#fff;
+}
+#badge{
+	background-color:-moz-lin
 }
