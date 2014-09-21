@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="" type="text/css">
+		<title>Canvas</title>
+	</head>
+	<body>
+		<canvas id="mycanvas" width="150" height="150">
+			<h1>here</h1>
+		</canvas>
+		<script>
+			var canvas = document.getElementById("mycanvas");
+			if(canvas.getContext){
+				var context = canvas.getContext('2d');
+				for(var i=1;i<10;i++){
+					context.fillStyle="rgb(200,0,0)";
+					context.fillRect(10*i,10*i,100,100);
+					context.font = '40px';
+					context.textBaseline='top';
+					context.fillText('here',10*i,0);
+				}
+				
+			}
+			else{
+				
+			}
+		</script>
+	</body>
+</html>	
