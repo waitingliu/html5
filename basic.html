@@ -3,17 +3,12 @@
 	<head>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="css/style.css" type="text/css">
-		<title>标题</title>
-		<!--[if IE 6-9]-->
-		<script type="text/javascript">
-			document.createElement("nav");
-			document.createElement("header");
-			document.createElement("footer");
-			document.createElement("section");
-			document.createElement("aside");
-			document.createElement("article");
+		<script type="text/javascript" charset="utf-8" src="js/jquery.js">
+		</script>
+		<script type="text/javascript" charset="utf-8" src="js/application.js">
 		</script>
 		
+		<title>标题</title>
 	</head>
 	<body>
 		<header id="page_header">
@@ -22,13 +17,35 @@
 			</h1>
 			<nav>
 				<ul>
-					<li><a href="">Articles</a></li>
-					<li><a href="">Pictures</a></li>
-					<li><a href="">Tips</a></li>
-					<li><a href="">Contact</a></li>
+					<li><a href="#articles">Articles</a></li>
+					<li><a href="#pictures">Pictures</a></li>
+					<li><a href="#tips">Tips</a></li>
+					<li><a href="#contact">Contact</a></li>
 				</ul>
 			</nav>
 		</header>
+		<section id="content" role="document" aria-live="assertive" aria-atomic="true">
+			<section id="articles">
+				<header>
+					<h2>articles</h2>
+				</header>
+			</section>
+			<section id="pictures">
+				<header>
+					<h2>pictrues</h2>
+				</header>
+			</section>
+			<section id="tips">
+				<header>
+					<h2>tips</h2>
+				</header>
+			</section>
+			<section id="contact">
+				<header>
+					<h2>contact</h2>
+				</header>
+			</section>
+		</section>
 		<section id="posts">
 		<article class="post">
 			<header>
