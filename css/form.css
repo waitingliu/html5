@@ -4,6 +4,12 @@
 }
 fieldset{
 	width:350px;
+	border:none;
+	background-color:#ddd;
+}
+fieldset legend{
+	background-color:#ddd;
+	padding:0 64px 0 2px;
 }
 fieldset#userinfo{
 	float:left;
@@ -22,22 +28,24 @@ fieldset#userinfo ol li{
 	margin:0 0 9px 0;
 	padding:0;
 }
-filedset#carinfo ul li{
-	clear:both;
-	list-style:none;
-}
-filedset#carinfo ui li>b,li>span{
-	font-size:20px;
-	display:block;
-	float:left;
-	width:100px
-}
-fieldset#carinfo ul li>span{
-	width:300px;
-	margin:left:20px;
-}
-
 /*使input单独成行*/
 fieldset input{
 	display:block;
+}
+input{
+	width:200px;
+	height:30px;
+	background-color:#fff;
+	border:1px solid #bbb;/*设置四边框的属性*/
+}
+input[type="submit"]{
+	width:202px;
+	height:30px;
+	padding:0;
+	background-color:#bbb;
+}
+input,fieldset,legend{
+	border-radius:5px;/*圆角边界，定义边界半径，越大越圆*/
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
 }
