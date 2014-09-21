@@ -1,0 +1,35 @@
+﻿body{
+	width:90%;
+	margin:15px auto;
+}
+#conference{
+	background-color:#000;
+	width:100%;
+	float:left;
+	height:240px;
+}
+#badge{
+	text-align:center;
+	width:20%;
+	border:2px solid blue;
+}
+#info{
+	margin:20px;
+	padding:20px;
+	width:70%;
+	height:60%;
+}
+#badge,#info{
+	float:left;
+	background-color:#fff;
+}
+#badge h2{
+	margin:0;
+	color:red;
+	font-size:40px;
+}
+#badge h3{
+	margin:0;
+	background-color:blue;
+	color:#fff;
+}
